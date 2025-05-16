@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Press Vault Preview – The Lakwalahal Foundation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1b1b1b;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .intro {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .document {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .document h3 {
+      margin-top: 0;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #555;
+    }
+    .download-all {
+      background-color: #007BFF;
+      margin-top: 2rem;
+    }
+    footer {
+      margin-top: 4rem;
+      background: #eaeaea;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .lang-selector {
+      text-align: center;
+      margin: 1rem 0 2rem 0;
+    }
+    .media-contact {
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .media-contact h4 {
+      margin-top: 0;
+    }
+    select {
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1 id="title">Press Vault – Preview Page</h1>
+</header>
+<div class="container">
+  <div class="lang-selector">
+    <label for="language" id="langLabel">Select Language:</label>
+    <select id="language" onchange="translatePage()">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ht">Kreyòl Ayisyen</option>
+      <option value="zh">中文</option>
+    </select>
+  </div>
+  <div class="intro" id="introText">
+    These public-safe scrolls and redacted documents are released for trusted media, spiritual allies, and legal observers seeking truth, transparency, and justice. Please handle with care and respect for the families, ancestors, and sacred mission involved.
+  </div>
+  <div class="document">
+    <h3 id="doc1">Scroll of Tribal Betrayal and Truth (Redacted)</h3>
+    <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?rlkey=rkxj9mhyekzijhr3pbd9gcmrv&st=ue33h0tc&dl=0" class="button" target="_blank">View Document</a>
+  </div>
+  <div class="document">
+    <h3 id="doc2">Lenape Reparations Dossier (Redacted)</h3>
+    <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?rlkey=rkxj9mhyekzijhr3pbd9gcmrv&st=ue33h0tc&dl=0" class="button" target="_blank">View Document</a>
+  </div>
+  <div class="document">
+    <h3 id="doc3">Contested Bloodline Statement</h3>
+    <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?rlkey=rkxj9mhyekzijhr3pbd9gcmrv&st=ue33h0tc&dl=0" class="button" target="_blank">View Document</a>
+  </div>
+  <div class="document">
+    <h3 id="doc4">FOIA Filing Overview</h3>
+    <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?rlkey=rkxj9mhyekzijhr3pbd9gcmrv&st=ue33h0tc&dl=0" class="button" target="_blank">View Document</a>
+  </div>
+  <div class="document">
+    <h3 id="doc5">Phase 4 Launch Summary</h3>
+    <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?rlkey=rkxj9mhyekzijhr3pbd9gcmrv&st=ue33h0tc&dl=0" class="button" target="_blank">View Document</a>
+  </div>
+  <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?rlkey=rkxj9mhyekzijhr3pbd9gcmrv&st=ue33h0tc&dl=0" class="button download-all" target="_blank" id="downloadAll">Download All Documents</a>
+  <div class="media-contact">
+    <h4>Media & Inquiries</h4>
+    <p>Email: <a href="mailto:william.fininen@gmail.com">william.fininen@gmail.com</a></p>
+    <p>Phone: 518-331-5870</p>
+    <p>Representative: William Timothy Fininen, Bearer of the Flame</p>
+  </div>
+</div>
+<footer>
+  The Lakwalahal Foundation – Mission: To Restore Truth, Shelter the Forgotten, and Reignite the Flame of Legacy.
+</footer>
+
+
+<script>
+function translatePage() {
+  const lang = document.getElementById('language').value;
+  const texts = {
+    en: {
+      title: "Press Vault – Preview Page",
+      langLabel: "Select Language:",
+      introText: "These public-safe scrolls and redacted documents are released for trusted media, spiritual allies, and legal observers seeking truth, transparency, and justice. Please handle with care and respect for the families, ancestors, and sacred mission involved.",
+      doc1: "Scroll of Tribal Betrayal and Truth (Redacted)",
+      doc2: "Lenape Reparations Dossier (Redacted)",
+      doc3: "Contested Bloodline Statement",
+      doc4: "FOIA Filing Overview",
+      doc5: "Phase 4 Launch Summary",
+      downloadAll: "Download All Documents"
+    },
+    es: {
+      title: "Archivo de Prensa – Página de Vista Previa",
+      langLabel: "Seleccionar idioma:",
+      introText: "Estos pergaminos y documentos redactados son seguros para el público y se liberan para medios de confianza, aliados espirituales y observadores legales que buscan verdad y justicia.",
+      doc1: "Pergamino de la Traición Tribal y la Verdad (Redactado)",
+      doc2: "Expediente de Reparaciones Lenape (Redactado)",
+      doc3: "Declaración de Linaje Contestado",
+      doc4: "Resumen de Solicitud FOIA",
+      doc5: "Resumen de Lanzamiento Fase 4",
+      downloadAll: "Descargar Todos los Documentos"
+    },
+    fr: {
+      title: "Coffre de Presse – Aperçu",
+      langLabel: "Choisir la langue:",
+      introText: "Ces documents expurgés sont partagés pour les médias de confiance, les alliés spirituels et les observateurs juridiques recherchant la vérité et la justice.",
+      doc1: "Parchemin de Trahison Tribale et Vérité (Expurgé)",
+      doc2: "Dossier de Réparations Lenape (Expurgé)",
+      doc3: "Déclaration de Lignée Contestée",
+      doc4: "Résumé de la Demande FOIA",
+      doc5: "Résumé de Lancement Phase 4",
+      downloadAll: "Télécharger Tous les Documents"
+    },
+    de: {
+      title: "Pressearchiv – Vorschau",
+      langLabel: "Sprache wählen:",
+      introText: "Diese öffentlichen, bereinigten Dokumente sind für vertrauenswürdige Medien, spirituelle Verbündete und juristische Beobachter bestimmt.",
+      doc1: "Schriftrolle des Stammesverrats und der Wahrheit (Bearbeitet)",
+      doc2: "Lenape-Reparationsdossier (Bearbeitet)",
+      doc3: "Erklärung der Umstrittenen Blutlinie",
+      doc4: "FOIA-Einreichungsübersicht",
+      doc5: "Phase-4-Startzusammenfassung",
+      downloadAll: "Alle Dokumente Herunterladen"
+    },
+    ht: {
+      title: "Achiv Laprès – Paj Preview",
+      langLabel: "Chwazi Lang:",
+      introText: "Dokiman sa yo pibliye pou medya ki fè konfyans, alye espirityèl, ak obsèvatè legal ki ap chèche laverite ak jistis.",
+      doc1: "Roulèt sou Trayizon Tribi ak Verite (Redakte)",
+      doc2: "Dosyè Reparasyon Lenape (Redakte)",
+      doc3: "Deklarasyon sou Liy San Konteste",
+      doc4: "Apèsi sou FOIA",
+      doc5: "Rezime Lanse Faz 4",
+      downloadAll: "Telechaje Tout Dokiman yo"
+    },
+    zh: {
+      title: "新闻资料库 – 预览页面",
+      langLabel: "选择语言：",
+      introText: "这些公开安全的文件是为寻求真相与正义的可信媒体、灵性盟友和法律观察员提供的。",
+      doc1: "部落背叛与真理卷轴（删节版）",
+      doc2: "Lenape赔偿档案（删节版）",
+      doc3: "有争议的血统声明",
+      doc4: "FOIA申请概览",
+      doc5: "第4阶段启动摘要",
+      downloadAll: "下载所有文档"
+    }
+  };
+
+  const t = texts[lang];
+  document.getElementById('title').innerText = t.title;
+  document.getElementById('langLabel').innerText = t.langLabel;
+  document.getElementById('introText').innerText = t.introText;
+  document.getElementById('doc1').innerText = t.doc1;
+  document.getElementById('doc2').innerText = t.doc2;
+  document.getElementById('doc3').innerText = t.doc3;
+  document.getElementById('doc4').innerText = t.doc4;
+  document.getElementById('doc5').innerText = t.doc5;
+  document.getElementById('downloadAll').innerText = t.downloadAll;
+}
+</script>
+</body>
+</html>
