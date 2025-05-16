@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Press Vault – Preview Page</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    body.day {
+      background-color: #fdf7ef;
+      color: #222;
+    }
+    body.night {
+      background-color: #111;
+      color: #eee;
+    }
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    .mode-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .mode-toggle button {
+      background-color: #ff4400;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .countdown {
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 1rem;
+      background-color: rgba(255, 68, 0, 0.1);
+      border-top: 2px solid #ff4400;
+      border-bottom: 2px solid #ff4400;
+      color: #ff7700;
+      font-weight: bold;
+      text-shadow: 0 0 8px #ff5500;
+    }
+    .container {
+      padding: 2rem 1rem;
+      max-width: 700px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .document {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.4rem;
+      background-color: #333;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .button:hover {
+      background-color: #555;
+    }
+    footer {
+      margin-top: 3rem;
+      background: #eaeaea;
+      text-align: center;
+      padding: 1.2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body class="night">
+  <div class="mode-toggle">
+    <button onclick="toggleMode()">Toggle Ritual Mode</button>
+  </div>
+  <audio id="shieldTone" autoplay loop hidden>
+    <source src="flame_shield_tone.mp3" type="audio/mp3">
+  </audio>
+
+  <header>
+    <h1>Press Vault – Preview Page</h1>
+  </header>
+
+  <div class="countdown" id="countdown">
+    Sacred Flame Ignites In: Loading...
+  </div>
+
+  <div class="container">
+    <div class="intro">
+      These public-safe scrolls and sacred documents are presented for truthseekers, allies, and watchers. Treat them with reverence and vigilance.
+    </div>
+
+    <div class="document">
+      <h3>Phase 4 Launch Summary</h3>
+      <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?dl=0" class="button" target="_blank">View Document</a>
+    </div>
+
+    <a href="https://www.dropbox.com/scl/fo/8jyo345nyqqbgcvzeyo6t/AE6tNwQnJd9QsWoJ-4inLyc?dl=0" class="button" target="_blank">Download All</a>
+  </div>
+
+  <footer>The Lakwalahal Foundation – Flame of Legacy.</footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('day');
+      document.body.classList.toggle('night');
+    }
+
+    const countdownElement = document.getElementById("countdown");
+    const targetDate = new Date("July 7, 2025 19:07:00 GMT-0400").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "The Sacred Flame Has Ignited.";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML =
+        "Sacred Flame Ignites In: " + days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
