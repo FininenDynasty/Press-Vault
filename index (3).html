@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flame-Shield Vault Gate</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script>
+    const correctPassword = "flame777";
+    const entered = sessionStorage.getItem("authenticated");
+    if (!entered) {
+      const userPass = prompt("Enter password to access the Press Vault:");
+      if (userPass !== correctPassword) {
+        alert("Incorrect password. Reload the page to try again.");
+        document.write("Access Denied.");
+        throw new Error("Unauthorized access");
+      } else {
+        sessionStorage.setItem("authenticated", true);
+      }
+    }
+  </script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-image: url('A_2D_digital_graphic_displays_a_stylized_flame_set.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 260px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      margin: 1rem 2rem;
+      text-align: center;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      background-color: #ff4400;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+    button:hover {
+      background-color: #ff6600;
+    }
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Press Vault – Preview Page</h1>
+  <div class="subtitle">Tap the shield to unlock this flame-guarded portal</div>
+  <button onclick="unlockVault()">Tap to Unlock</button>
+
+  <footer>The Lakwalahal Foundation — Flame of Legacy</footer>
+
+  <script>
+    function unlockVault() {
+      window.location.href = "index_ritual.html";
+    }
+  </script>
+</body>
+</html>
