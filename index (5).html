@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Press Vault Gate</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      background-image: url('A_2D_digital_graphic_displays_a_stylized_flame_set.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+    h1 {
+      margin-top: -40px;
+      font-size: 1.8rem;
+      color: #ff4400;
+      text-shadow: 0 0 6px #000;
+    }
+    p {
+      text-align: center;
+      margin: 1rem;
+      font-size: 1.1rem;
+    }
+    button {
+      background-color: #ff4400;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+  </style>
+  <script>
+    function unlockVault() {
+      const entered = sessionStorage.getItem("authenticated");
+      if (entered === "true") {
+        window.location.href = "index_ritual.html";
+      } else {
+        const pass = prompt("Enter password to access the Press Vault:");
+        if (pass === "flame777") {
+          sessionStorage.setItem("authenticated", "true");
+          window.location.href = "index_ritual.html";
+        } else {
+          alert("Incorrect password. Reload to try again.");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Press Vault Gate</h1>
+  <p>Tap the flame to unlock this sacred portal.</p>
+  <button onclick="unlockVault()">Tap to Unlock</button>
+  <footer>&copy; The Lakwalahal Foundation — Flame Protected</footer>
+</body>
+</html>
